@@ -90,7 +90,7 @@ class UsersController < ApplicationController
     
     # Make sure the user is admin
     def admin_user
-      redirect_to(root_url) unless_current_user.admin?
+      redirect_to(root_url) unless current_user.admin?
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
